@@ -6,7 +6,7 @@ from backend.models.support import create_support_ticket, get_user_tickets, get_
 from backend.utils.weather import get_weather_by_city, get_forecast_by_city, get_current_weather, get_recommendation, get_hourly_forecast_by_city
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins="*", supports_credentials=False)
 
 
 # ── Auth ──────────────────────────────────────────────
