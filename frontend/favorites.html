@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Weather 2.0 - Mis Ubicaciones</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-sky">
+    <video class="bg-video" autoplay muted loop playsinline>
+        <source src="assets/bgsr-video.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <div class="favorites-box">
+            <a href="home.html" class="back-btn-pill">← Volver</a>
+            <img src="assets/logo.jpg" alt="Live Weather 2.0" class="logo-small">
+            
+            <h1>Mis Ubicaciones Favoritas</h1>
+            
+            <form id="addFavoriteForm">
+                <input 
+                    type="text" 
+                    id="cityInput" 
+                    placeholder="Agregar nueva ciudad" 
+                    required
+                >
+                <button type="submit">+ Agregar</button>
+            </form>
+
+            <p class="message" id="message"></p>
+
+            <div id="favoritesList" class="favorites-list"></div>
+        </div>
+    </div>
+
+    <script src="js/favorites.js"></script>
+</body>
+</html>

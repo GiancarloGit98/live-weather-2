@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Weather 2.0 - Panel Admin</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-storm">
+    <video class="bg-video" autoplay muted loop playsinline>
+        <source src="assets/bg-video.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <div class="admin-box">
+            <a href="home.html" class="back-btn-pill">← Volver</a>
+            <img src="assets/logo.jpg" alt="Live Weather 2.0" class="logo-small">
+            
+            <h1>Panel de Administración</h1>
+
+            <div class="admin-tabs">
+                <button class="admin-tab active" onclick="switchAdminTab('tickets')">📋 Solicitudes PQR</button>
+                <button class="admin-tab" onclick="switchAdminTab('users')">👥 Gestión de Usuarios</button>
+            </div>
+
+            <!-- TICKETS SECTION -->
+            <div id="ticketsSection" class="admin-section">
+                <div class="admin-filters">
+                    <button class="filter-btn active" onclick="filterTickets('all', event)">Todas</button>
+                    <button class="filter-btn" onclick="filterTickets('pendiente', event)">🕐 Pendientes</button>
+                    <button class="filter-btn" onclick="filterTickets('atendido', event)">✅ Atendidos</button>
+                    <button class="filter-btn" onclick="filterTickets('cerrado', event)">🔒 Cerrados</button>
+                </div>
+                <p class="admin-counter" id="ticketCounter"></p>
+                <div id="adminTicketsList" class="tickets-list"></div>
+            </div>
+
+            <!-- USERS SECTION -->
+            <div id="usersSection" class="admin-section hidden">
+                <p class="admin-counter" id="userCounter"></p>
+                <div id="adminUsersList" class="users-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

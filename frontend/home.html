@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Weather 2.0 - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-clouds">
+    <video class="bg-video" autoplay muted loop playsinline>
+        <source src="assets/bg-video.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        ...
+    <div class="container">
+        <div class="home-box">
+            <img src="assets/logo.jpg" alt="Live Weather 2.0" class="logo">
+            
+            <p class="welcome-text">Bienvenido, <span id="userName"></span></p>
+
+            <div class="menu-grid">
+                <a href="weather.html" class="menu-btn">
+                    <img src="assets/consulta_logo.png" alt="Consulta" class="menu-icon-img">
+                    <span>Consulta Clima</span>
+                </a>
+                <a href="forecast.html" class="menu-btn">
+                    <img src="assets/pronostico_logo.png" alt="Pronóstico" class="menu-icon-img">
+                    <span>Pronóstico</span>
+                </a>
+                <a href="favorites.html" class="menu-btn">
+                    <img src="assets/ubicaciones_logo.png" alt="Ubicaciones" class="menu-icon-img">
+                    <span>Mis Ubicaciones</span>
+                </a>
+                <a href="support.html" class="menu-btn">
+                    <img src="assets/servicio_logo.png" alt="Servicio" class="menu-icon-img">
+                    <span>Servicio al Cliente</span>
+                </a>
+            </div>
+
+            <button class="logout-btn" onclick="logout()">Cerrar Sesión</button>
+        </div>
+    </div>
+
+    <script src="js/home.js"></script>
+</body>
+</html>

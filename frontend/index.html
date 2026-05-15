@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Weather 2.0 - Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-login">
+    <div class="container">
+        <div class="login-wrapper">
+            <video class="bg-video" autoplay muted loop playsinline>
+        <source src="assets/bgflowers-video.mp4" type="video/mp4">
+    </video>
+            <div class="login-bg">
+                <div class="auth-box">
+                    <img src="assets/logo.jpg" alt="Live Weather 2.0" class="logo">
+                    
+                    <div class="tabs">
+                        <button class="tab active" onclick="switchTab('login')">Iniciar Sesión</button>
+                        <button class="tab" onclick="switchTab('register')">Registrarse</button>
+                    </div>
+
+                    <div id="loginForm" class="tab-content active">
+                        <form class="auth-form" onsubmit="login(event)">
+                            <input type="email" id="loginEmail" placeholder="Correo electrónico" required>
+                            <input type="password" id="loginPassword" placeholder="Contraseña" required>
+                            <button type="submit">Ingresar</button>
+                        </form>
+                        <p class="message" id="loginMessage"></p>
+                    </div>
+
+                    <div id="registerForm" class="tab-content">
+                        <form class="auth-form" id="authRegisterForm">
+                            <input type="text" id="registerName" placeholder="Nombre completo" required>
+                            <input type="email" id="registerEmail" placeholder="Correo electrónico" required>
+                            <input type="password" id="registerPassword" placeholder="Contraseña" required>
+                            <button type="submit">Registrarse</button>
+                        </form>
+                        <p class="message" id="registerMessage"></p>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

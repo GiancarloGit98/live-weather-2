@@ -1,0 +1,8 @@
+Iniciar Venv:
+.\venv\Scripts\Activate.ps1
+
+Iniciar server:
+Python -m backend.server
+
+Inciar server flask
+python server_flask.py
