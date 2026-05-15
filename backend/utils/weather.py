@@ -266,8 +266,8 @@ def get_hourly_forecast_by_city(city_name, date):
     result = get_hourly_forecast(coords["latitude"], coords["longitude"], date)
     if not result["success"]:
         return result
-    
-  return {
+
+    return {
         "success": True,
         "city": coords["city"],
         "country": coords["country"],
