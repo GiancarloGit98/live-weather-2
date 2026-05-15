@@ -1142,3 +1142,28 @@ button[type="submit"]:hover,
 .auth-form input[type="password"]:focus {
     color: var(--blanco);
 }
+
+/* Botón agregar a favoritos */
+.add-fav-btn {
+    display: block;
+    margin: 20px auto 5px;
+    padding: 12px 30px;
+    background: rgba(95, 205, 217, 0.15);
+    border: 1px solid #5fcdd9;
+    color: #5fcdd9;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-fav-btn:hover {
+    background: rgba(95, 205, 217, 0.3);
+    transform: scale(1.05);
+}
+
+.add-fav-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}

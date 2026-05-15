@@ -184,3 +184,51 @@ function showHourDetail(hour, hourStr, icon) {
     `;
     detail.classList.remove('hidden');
 }
+
+// --- Agregar a favoritos ---
+let currentCityData = null;
+
+function storeCity(data) {
+    currentCityData = {
+        city: data.city,
+        country: data.country,
+        latitude: data.latitude,
+        longitude: data.longitude
+    };
+}
+
+async function addToFavorites() {
+    if (!currentCityData) return;
+    const favMessage = document.getElementById('favMessage');
+    const btn = document.getElementById('addFavBtn');
+    btn.disabled = true;
+
+    try {
+        const response = await fetch(`${API_URL}/favorites/add`, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                user_id: user.id,
+                city_name: currentCityData.city,
+                country: currentCityData.country,
+                latitude: currentCityData.latitude,
+                longitude: currentCityData.longitude
+            })
+        });
+        const data = await response.json();
+
+        if (response.ok) {
+            favMessage.textContent = '⭐ Ciudad agregada a favoritos';
+            favMessage.className = 'message success';
+            btn.textContent = '✅ Agregada';
+        } else {
+            favMessage.textContent = data.error || 'Error al agregar';
+            favMessage.className = 'message error';
+            btn.disabled = false;
+        }
+    } catch (error) {
+        favMessage.textContent = 'Error al conectar con el servidor';
+        favMessage.className = 'message error';
+        btn.disabled = false;
+    }
+}
