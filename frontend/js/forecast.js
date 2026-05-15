@@ -64,6 +64,7 @@ forecastForm.addEventListener('submit', async (e) => {
 });
 
 function displayForecast(data, dateStr) {
+    storeCity(data);
     const dt = new Date(dateStr + 'T00:00:00');
     const dayName = daysES[dt.getDay()];
     const dayNum = dt.getDate();
