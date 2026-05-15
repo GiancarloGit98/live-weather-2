@@ -3,7 +3,7 @@ if (!user) {
     window.location.href = 'index.html';
 }
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://live-weather-2.onrender.com/api';
 
 const supportForm = document.getElementById('supportForm');
 const messageEl = document.getElementById('statusMessage');

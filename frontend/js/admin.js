@@ -3,7 +3,7 @@ if (!user || user.role_id !== 2) {
     window.location.href = 'home.html';
 }
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://live-weather-2.onrender.com/api';
 
 let allTickets = [];
 let allUsers = [];

@@ -164,7 +164,7 @@ DB_NAME=live_weather_2
 python -m backend.server
 ```
 
-El servidor quedará corriendo en `http://localhost:5000`
+El servidor quedará corriendo en `https://live-weather-2.onrender.com`
 
 ### 7. Abrir el frontend
 

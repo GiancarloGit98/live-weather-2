@@ -1,7 +1,7 @@
 const user = JSON.parse(localStorage.getItem('user'));
 if (!user) window.location.href = 'index.html';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://live-weather-2.onrender.com/api';
 
 const weatherForm = document.getElementById('weatherForm');
 const weatherResult = document.getElementById('weatherResult');
